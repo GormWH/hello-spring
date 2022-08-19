@@ -9,12 +9,12 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
 repositories {
-	mavenCentral()
+	mavenCentral() // library download site
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' //html template engine
+	implementation 'org.springframework.boot:spring-boot-starter-web' // web project
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
