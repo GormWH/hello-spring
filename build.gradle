@@ -16,6 +16,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' //html template engine
 	implementation 'org.springframework.boot:spring-boot-starter-web' // web project
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// db
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc' // jdbc
+	runtimeOnly 'com.h2database:h2' // h2
 }
 
 tasks.named('test') {
