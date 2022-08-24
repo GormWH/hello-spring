@@ -39,4 +39,10 @@ public class MemberController {
         model.addAttribute("members", members);
         return "members/memberList";
     }
+
+    @GetMapping("/test")
+    public String test(Model model) {
+        model.addAttribute("data", "test string");
+        return "members/test";
+    }
 }
