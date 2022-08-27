@@ -1,6 +1,8 @@
 package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;
+import hello.hellospring.repository.MemoryMemberRepository;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -8,8 +10,18 @@ import static org.assertj.core.api.Assertions.*;
 
 class MemberServiceTest {
 
-    MemberService memberService = new MemberService();
+    MemberService memberService;
 
+    public MemberServiceTest(MemberService memberService) {
+        this.memberService = memberService;
+    }
+
+    MemoryMemberRepository memberRepository = new MemoryMemberRepository();
+
+    @AfterEach
+    public void afterEach() {
+        memberRepository.clearStore();
+    }
     @Test
     void join() {
         // given
