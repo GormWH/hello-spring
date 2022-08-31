@@ -62,6 +62,7 @@ public class MemberServiceIntegrationTest {
 
         // then
         assertThat(result.size()).isEqualTo(1);
+        assertThat(result.size()).isEqualTo(1);
     }
 
     @Test
